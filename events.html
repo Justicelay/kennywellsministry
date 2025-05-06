@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Kenny Wells Ministry</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="events-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Include the same header as index.html -->
+    <header class="main-header">
+        <!-- ... copy header from index.html ... -->
+    </header>
+
+    <main>
+        <section class="events-hero">
+            <div class="container">
+                <h1>Upcoming Events</h1>
+                <p>Join us for inspiring gatherings, workshops, and spiritual growth opportunities.</p>
+            </div>
+        </section>
+
+        <section class="events-main">
+            <div class="container">
+                <div class="events-filter">
+                    <form class="filter-grid">
+                        <div class="filter-group">
+                            <label for="event-type">Event Type</label>
+                            <select id="event-type">
+                                <option value="all">All Events</option>
+                                <option value="service">Services</option>
+                                <option value="workshop">Workshops</option>
+                                <option value="conference">Conferences</option>
+                                <option value="youth">Youth Events</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="event-date">Date</label>
+                            <input type="month" id="event-date">
+                        </div>
+                        <div class="filter-group">
+                            <label for="event-location">Location</label>
+                            <select id="event-location">
+                                <option value="all">All Locations</option>
+                                <option value="main">Main Sanctuary</option>
+                                <option value="conference">Conference Center</option>
+                                <option value="youth">Youth Center</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="events-list">
+                    <h2 class="month-divider">June 2025</h2>
+                    <!-- Copy and modify event cards from index.html -->
+                    <!-- Add more events -->
+                </div>
+
+                <div class="load-more">
+                    <button class="btn btn-secondary">Load More Events</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include the same footer as index.html -->
+    <footer class="main-footer">
+        <!-- ... copy footer from index.html ... -->
+    </footer>
+</body>
+</html>

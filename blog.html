@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Kenny Wells Ministry</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script.js" defer></script>
+    <script src="blog-script.js" defer></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo">
+                <h1>Kenny Wells Ministry</h1>
+            </div>
+            <nav class="main-nav">
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about-mission">About</a></li>
+                    <li><a href="index.html#outreach">Mission</a></li>
+                    <li><a href="index.html#events">Events</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="shop.html" class="shop-link">Shop</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="blog-hero">
+            <div class="container">
+                <h1>Ministry Blog</h1>
+                <p>Inspirational stories, teachings, and updates from our ministry</p>
+            </div>
+        </section>
+
+        <section class="blog-content">
+            <div class="container blog-grid">
+                <div class="main-content">
+                    <!-- Featured Post -->
+                    <article class="blog-post featured">
+                        <div class="post-image">
+                            <img src="path/to/featured-image.jpg" alt="Featured Post">
+                            <span class="featured-tag">Featured</span>
+                        </div>
+                        <div class="post-content">
+                            <h2>Walking in Faith During Challenging Times</h2>
+                            <div class="post-meta">
+                                <span><i class="fas fa-calendar"></i> June 15, 2024</span>
+                                <span><i class="fas fa-user"></i> Pastor Kenny Wells</span>
+                            </div>
+                            <p>Join us as we explore how to maintain strong faith during life's challenges...</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </article>
+
+                    <!-- Regular Posts -->
+                    <div class="blog-posts-grid">
+                        <article class="blog-post">
+                            <div class="post-image">
+                                <img src="path/to/post-image-1.jpg" alt="Blog Post">
+                            </div>
+                            <div class="post-content">
+                                <h3>Understanding God's Grace</h3>
+                                <div class="post-meta">
+                                    <span><i class="fas fa-calendar"></i> June 10, 2024</span>
+                                    <span><i class="fas fa-user"></i> Pastor Kenny Wells</span>
+                                </div>
+                                <p>Exploring the depths of God's grace and its impact on our lives...</p>
+                                <a href="#" class="btn btn-secondary">Read More</a>
+                            </div>
+                        </article>
+                        <!-- Add more blog posts as needed -->
+                    </div>
+
+                    <div class="pagination">
+                        <button class="pagination-btn active">1</button>
+                        <button class="pagination-btn">2</button>
+                        <button class="pagination-btn">3</button>
+                        <button class="pagination-btn next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <aside class="blog-sidebar">
+                    <div class="sidebar-widget search-widget">
+                        <h3>Search Posts</h3>
+                        <form class="search-form">
+                            <input type="search" placeholder="Search...">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+
+                    <div class="sidebar-widget categories-widget">
+                        <h3>Categories</h3>
+                        <ul class="category-list">
+                            <li><a href="#">Faith & Spirituality <span>(12)</span></a></li>
+                            <li><a href="#">Biblical Teachings <span>(8)</span></a></li>
+                            <li><a href="#">Community Outreach <span>(6)</span></a></li>
+                            <li><a href="#">Prayer & Worship <span>(10)</span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget recent-posts-widget">
+                        <h3>Recent Posts</h3>
+                        <ul class="recent-posts">
+                            <li>
+                                <img src="path/to/recent-post-1.jpg" alt="Recent Post">
+                                <div>
+                                    <h4><a href="#">The Power of Prayer</a></h4>
+                                    <span>June 5, 2024</span>
+                                </div>
+                            </li>
+                            <!-- Add more recent posts -->
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about-mission">About</a></li>
+                <li><a href="index.html#outreach">Mission</a></li>
+                <li><a href="index.html#events">Events</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

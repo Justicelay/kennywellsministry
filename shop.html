@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Kenny Wells Ministry</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="shop-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script.js" defer></script>
+    <script src="shop-script.js" defer></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo">
+                <h1>Kenny Wells Ministry</h1>
+            </div>
+            <nav class="main-nav">
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about-mission">About</a></li>
+                    <li><a href="index.html#outreach">Mission</a></li>
+                    <li><a href="index.html#events">Events</a></li>
+                    <li><a href="shop.html" class="active shop-link">Shop</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="shop-hero">
+            <div class="container">
+                <h1>Ministry Resources</h1>
+                <p>Books, sermons, and materials to enrich your spiritual journey</p>
+            </div>
+        </section>
+
+        <section class="shop-content">
+            <div class="container">
+                <div class="shop-sidebar">
+                    <div class="shop-search">
+                        <h3>Search</h3>
+                        <div class="search-box">
+                            <input type="text" id="search-input" placeholder="Search products...">
+                            <button id="search-button"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="shop-categories">
+                        <h3>Categories</h3>
+                        <ul class="category-list">
+                            <li><button class="category-btn active" data-category="all">All Products</button></li>
+                            <li><button class="category-btn" data-category="books">Books</button></li>
+                            <li><button class="category-btn" data-category="sermons">Sermon Series</button></li>
+                            <li><button class="category-btn" data-category="devotionals">Devotionals</button></li>
+                            <li><button class="category-btn" data-category="studies">Bible Studies</button></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="shop-price-filter">
+                        <h3>Price Range</h3>
+                        <div class="price-slider-container">
+                            <input type="range" min="0" max="50" value="50" class="price-slider" id="price-range">
+                            <div class="price-display">
+                                <span>$0</span>
+                                <span id="price-value">$50</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="shop-products">
+                    <div class="shop-controls">
+                        <div class="product-count">
+                            <span id="product-count">Showing 12 products</span>
+                        </div>
+                        <div class="shop-sort">
+                            <label for="sort-select">Sort by:</label>
+                            <select id="sort-select">
+                                <option value="featured">Featured</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="newest">Newest</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="products-grid" id="products-container">
+                        <!-- Product 1 -->
+                        <div class="product-card" data-category="books" data-price="18.99">
+                            <div class="product-image">
+                                <img src="/api/placeholder/250/350" alt="Walking in Faith Book">
+                                <div class="product-tag bestseller">Bestseller</div>
+                            </div>
+                            <div class="product-details">
+                                <h3>Walking in Faith</h3>
+                                <p class="product-description">A guide to deepening your relationship with Christ in everyday life.</p>
+                                <div class="product-meta">
+                                    <p class="product-price">$18.99</p>
+                                    <div class="product-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>(29)</span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary add-to-cart" data-id="12">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pagination">
+                        <button class="pagination-btn active">1</button>
+                        <button class="pagination-btn">2</button>
+                        <button class="pagination-btn">3</button>
+                        <button class="pagination-btn next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Shopping Cart Sidebar -->
+        <div class="cart-sidebar" id="cart-sidebar">
+            <div class="cart-header">
+                <h3><i class="fas fa-shopping-cart"></i> Your Cart</h3>
+                <button class="close-cart" id="close-cart"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items will be dynamically added here -->
+                <div class="empty-cart-message">Your cart is empty</div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cart-total-amount">$0.00</span>
+                </div>
+                <button class="btn btn-primary checkout-btn" id="checkout-btn">Checkout</button>
+            </div>
+        </div>
+        <div class="cart-overlay" id="cart-overlay"></div>
+        
+        <!-- Call to Action -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Share the Message</h2>
+                    <p>Help spread the Gospel by sharing our resources with friends and family.</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-cta">Join Our Book Club</a>
+                        <a href="index.html#contact" class="btn btn-secondary">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>Kenny Wells Ministry</h3>
+                    <p>Dedicated to sharing the Gospel of Jesus Christ and serving those in need with love and compassion.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about-mission">About Us</a></li>
+                        <li><a href="index.html#outreach">Our Mission</a></li>
+                        <li><a href="index.html#events">Events</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Faith Street, Hope City, HC 12345</p>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@kennywellsministry.org</p>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Stay Connected</h3>
+                    <p>Subscribe to our newsletter for updates on events and outreach opportunities.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit" class="btn btn-secondary">Subscribe</button>
+                    </form>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Kenny Wells Ministry. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
