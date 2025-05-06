@@ -1481,21 +1481,28 @@ button {
     .nav-links {
         position: fixed;
         top: 70px;
-        right: -100%;
-        width: 80%;
-        max-width: 300px;
+        left: -100%;
+        width: 100%;
         height: calc(100vh - 70px);
         background-color: var(--bg-white);
         flex-direction: column;
-        align-items: flex-start;
-        padding: var(--spacing-lg);
-        z-index: 100;
-        box-shadow: var(--box-shadow-lg);
-        transition: right var(--transition-speed);
+        align-items: center;
+        padding: var(--spacing-xl) var(--spacing-lg);
+        transition: left 0.3s ease-in-out;
+        z-index: 1000;
     }
     
     .nav-links.show {
-        right: 0;
+        left: 0;
+    }
+    
+    .nav-links li {
+        margin: var(--spacing-md) 0;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+        z-index: 1001;
     }
     
     .mobile-menu-toggle.active .hamburger {
@@ -1503,13 +1510,17 @@ button {
     }
     
     .mobile-menu-toggle.active .hamburger::before {
-        top: 0;
         transform: rotate(45deg);
+        top: 0;
     }
     
     .mobile-menu-toggle.active .hamburger::after {
-        top: 0;
         transform: rotate(-45deg);
+        top: 0;
+    }
+    
+    body.menu-open {
+        overflow: hidden;
     }
 }
 
